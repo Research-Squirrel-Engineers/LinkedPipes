@@ -15,7 +15,7 @@ sparqlunicorntool=>inputoutput: SPARQLing Unicorn QGIS Plugin 0.12 (Q71937877)|t
 
 csv->recogito(right)->recogitods->recogitoannotator(left)->annotatedrecogitods->recogitoexporter(right)->geojson(right)->qgistool->qgislayer(left)->sparqlunicorntool->qgislayerenriched(right)->qgisprintcomposer(right)->qgismap`;
 
-let alligator = `statisticaldata=>subroutine: Statistical data (CSV)|data:>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
+let alligator = `statisticaldata=>subroutine: Statistical data (CSV)|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
 alligatorfile=>subroutine: Alligator File|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt
 alligatorrdf=>subroutine: Alligator RDF|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_rdf.ttl
 cypher=>subroutine: Cypher Dataset|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_cypther.cql
