@@ -59,6 +59,12 @@ window.onload = function() {
                     'font-color': 'black',
                     'font-weight': 'bold'
                 },
+                'toolwd': {
+                    'fill': '#ead1dc',
+                    'font-size': 12,
+                    'font-color': 'black',
+                    'font-weight': 'bold'
+                },
             }
         });
 
@@ -142,6 +148,12 @@ $('#pipeselect').change(function() {
             },
             'tool': {
                 'fill': '#ffffd1',
+                'font-size': 12,
+                'font-color': 'black',
+                'font-weight': 'bold'
+            },
+            'toolwd': {
+                'fill': '#ead1dc',
                 'font-size': 12,
                 'font-color': 'black',
                 'font-weight': 'bold'
