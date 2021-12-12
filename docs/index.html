@@ -32,12 +32,12 @@ qgislayer=>subroutine: QGIS Vector Layer|data
 qgismap=>subroutine: Map PDF|data
 qgislayerenriched=>subroutine: Enriched QGIS Vector Layer|data
 annotatedrecogitods=>subroutine: Annotated Recogito Dataset|data
-recogito=>inputoutput: Recogito (Q74692524)|tool:>https://www.wikidata.org/entity/Q74692524
+recogito=>inputoutput: Recogito (Q74692524)|toolwd:>https://www.wikidata.org/entity/Q74692524
 recogitoannotator=>inputoutput: Recogito Annotation tool|tool:>https://github.com/recogito/recogito-js
 recogitoexporter=>inputoutput: Recogito Exporter|tool
-qgistool=>inputoutput: QGIS 3.18 (Q1329181)|tool:>https://www.wikidata.org/entity/Q1329181
+qgistool=>inputoutput: QGIS 3.18 (Q1329181)|toolwd:>https://www.wikidata.org/entity/Q1329181
 qgisprintcomposer=>inputoutput: QGIS 3.18 Print Composer|tool
-sparqlunicorntool=>inputoutput: SPARQLing Unicorn QGIS Plugin 0.12 (Q71937877)|tool:>https://www.wikidata.org/entity/Q71937877
+sparqlunicorntool=>inputoutput: SPARQLing Unicorn QGIS Plugin 0.12 (Q71937877)|toolwd:>https://www.wikidata.org/entity/Q71937877
 
 csv->recogito(right)->recogitods->recogitoannotator(left)->annotatedrecogitods->recogitoexporter(right)->geojson(right)->qgistool->qgislayer(left)->sparqlunicorntool->qgislayerenriched(right)->qgisprintcomposer(right)->qgismap
 </textarea></div>
