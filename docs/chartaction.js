@@ -60,7 +60,7 @@ window.onload = function() {
                     'font-weight': 'bold'
                 },
                 'toolwd': {
-                    'fill': '#ead1dc',
+                    'fill': '#d5a6bd',
                     'font-size': 12,
                     'font-color': 'black',
                     'font-weight': 'bold'
@@ -153,7 +153,7 @@ $('#pipeselect').change(function() {
                 'font-weight': 'bold'
             },
             'toolwd': {
-                'fill': '#ead1dc',
+                'fill': '#d5a6bd',
                 'font-size': 12,
                 'font-color': 'black',
                 'font-weight': 'bold'
