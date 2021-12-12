@@ -1,16 +1,33 @@
-let alligator = `statisticaldata=>subroutine: Statistical data (CSV)|data:>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
-alligatorfile=>subroutine:Alligator File|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt
-alligatorrdf=>subroutine:Alligator RDF|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_rdf.ttl
-cypher=>subroutine:Cypher Dataset|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_cypther.cql
-neo4jdb=>subroutine:Neo4J Database|data
-images=>subroutine:Screenshot of Graph (PNG)|data
+let julesverne = `csv=>subroutine: Jules_Vernes_Five_Weeks_in_a_balloon.txt|data:>https://www.gutenberg.org/cache/epub/3526/pg3526-images.html#link2HCH0001
+recogitods=>subroutine: Recogito Dataset|data
+geojson=>subroutine: GeoJSON|data
+qgislayer=>subroutine: QGIS Vector Layer|data
+qgismap=>subroutine: Map PDF|data
+qgislayerenriched=>subroutine: Enriched QGIS Vector Layer|data
+annotatedrecogitods=>subroutine: Annotated Recogito Dataset|data
 
-alligatorca=>inputoutput:Alligator-CA Tool|tool:>https://github.com/RGZM/alligator-ca
-alligator=>inputoutput:Alligator (Q74004218)|toolwd:>https://www.wikidata.org/entity/Q74004218
-alligatortoamt=>inputoutput:Alligator to Amt transformer|tool
-amt=>inputoutput:Academic Meta Tool (Q74003194)|toolwd:>https://www.wikidata.org/entity/Q74003194
-neo4jimporter=>inputoutput:Neo4J Importer|tool
-neo4jguifrontend=>inputoutput:Neo4J GUI Frontend Screenshot Tool|tool
+recogito=>inputoutput: Recogito (Q74692524)|toolwd:>https://www.wikidata.org/entity/Q74692524
+recogitoannotator=>inputoutput: Recogito Annotation tool|tool:>https://github.com/recogito/recogito-js
+recogitoexporter=>inputoutput: Recogito Exporter|tool
+qgistool=>inputoutput: QGIS 3.18 (Q1329181)|toolwd:>https://www.wikidata.org/entity/Q1329181
+qgisprintcomposer=>inputoutput: QGIS 3.18 Print Composer|tool
+sparqlunicorntool=>inputoutput: SPARQLing Unicorn QGIS Plugin 0.12 (Q71937877)|toolwd:>https://www.wikidata.org/entity/Q71937877
+
+csv->recogito(right)->recogitods->recogitoannotator(left)->annotatedrecogitods->recogitoexporter(right)->geojson(right)->qgistool->qgislayer(left)->sparqlunicorntool->qgislayerenriched(right)->qgisprintcomposer(right)->qgismap`;
+
+let alligator = `statisticaldata=>subroutine: Statistical data (CSV)|data:>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
+alligatorfile=>subroutine: Alligator File|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt
+alligatorrdf=>subroutine: Alligator RDF|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_rdf.ttl
+cypher=>subroutine: Cypher Dataset|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_cypther.cql
+neo4jdb=>subroutine: Neo4J Database|data
+images=>subroutine: Screenshot of Graph (PNG)|data
+
+alligatorca=>inputoutput: Alligator-CA Tool|tool:>https://github.com/RGZM/alligator-ca
+alligator=>inputoutput: Alligator (Q74004218)|toolwd:>https://www.wikidata.org/entity/Q74004218
+alligatortoamt=>inputoutput: Alligator to Amt transformer|tool
+amt=>inputoutput: Academic Meta Tool (Q74003194)|toolwd:>https://www.wikidata.org/entity/Q74003194
+neo4jimporter=>inputoutput: Neo4J Importer|tool
+neo4jguifrontend=>inputoutput: Neo4J GUI Frontend Screenshot Tool|tool
 
 statisticaldata->alligatorca->alligatorfile(right)->alligator->alligatorrdf(right)->amt(right)->cypher->neo4jimporter(right)->neo4jdb(right)->neo4jguifrontend(right)->images`;
 
@@ -49,20 +66,3 @@ qgisprintcomposer=>inputoutput: QGIS Print Composer|tool
 rdf4jsparqlendpoint=>inputoutput: RDF4J SPARQL Endpoint|tool
 
 msaccess->bullzip->sqlfile(left)->csvtopostgis(bottom)->postgisdb(right)->postgistocsv(right)->csv(right)->pythonscript(right)->ttl(right)->rdf4jimport->rdf4jdb(left)->rdf4jsparqlendpoint->sparqlresult(right)->sparqlunicornqgisplugin(right)->qgisvectorlayer(right)->qgisprintcomposer(right)->images`;
-
-let julesverne = `csv=>subroutine: Jules_Vernes_Five_Weeks_in_a_balloon.txt|data:>https://www.gutenberg.org/cache/epub/3526/pg3526-images.html#link2HCH0001
-recogitods=>subroutine: Recogito Dataset|data
-geojson=>subroutine: GeoJSON|data
-qgislayer=>subroutine: QGIS Vector Layer|data
-qgismap=>subroutine: Map PDF|data
-qgislayerenriched=>subroutine: Enriched QGIS Vector Layer|data
-annotatedrecogitods=>subroutine: Annotated Recogito Dataset|data
-
-recogito=>inputoutput: Recogito (Q74692524)|toolwd:>https://www.wikidata.org/entity/Q74692524
-recogitoannotator=>inputoutput: Recogito Annotation tool|tool:>https://github.com/recogito/recogito-js
-recogitoexporter=>inputoutput: Recogito Exporter|tool
-qgistool=>inputoutput: QGIS 3.18 (Q1329181)|toolwd:>https://www.wikidata.org/entity/Q1329181
-qgisprintcomposer=>inputoutput: QGIS 3.18 Print Composer|tool
-sparqlunicorntool=>inputoutput: SPARQLing Unicorn QGIS Plugin 0.12 (Q71937877)|toolwd:>https://www.wikidata.org/entity/Q71937877
-
-csv->recogito(right)->recogitods->recogitoannotator(left)->annotatedrecogitods->recogitoexporter(right)->geojson(right)->qgistool->qgislayer(left)->sparqlunicorntool->qgislayerenriched(right)->qgisprintcomposer(right)->qgismap`;
