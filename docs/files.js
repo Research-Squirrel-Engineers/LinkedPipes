@@ -1,49 +1,49 @@
-let alligator=`statisticaldata=>subroutine: Statistical data (CSV):>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
-alligatorfile=>subroutine: Alligator File:>https://github.com/RGZM/alligator-mt-data
-alligatorrdf=>subroutine: Alligator RDF:>https://rgzm.github.io/alligator/vocab/
-cypher=>subroutine: Cypher Dataset:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_cypther.cql
-neo4jdb=>subroutine: Neo4J Database
-images=>subroutine: Screenshot of Graph (PNG)
-alligatorca=>inputoutput: Alligator-CA Coorespondance Analysis:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt
-alligator=>inputoutput: Alligator :>https://github.com/RGZM/alligator
-alligatortoamt=>inputoutput: Alligator To Amt
-amt=>inputoutput: Academic Meta Tool :>http://academic-meta-tool.xyz
-neo4jimporter=>inputoutput: Neo4J Importer
-neo4jguifrontend=>inputoutput: Neo4J GUI Frontend Screenshot Tool
+let alligator=`statisticaldata=>subroutine: Statistical data (CSV)|data:>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
+alligatorfile=>subroutine: Alligator File|data:>https://github.com/RGZM/alligator-mt-data
+alligatorrdf=>subroutine: Alligator RDF|data:>https://rgzm.github.io/alligator/vocab/
+cypher=>subroutine: Cypher Dataset|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_cypther.cql
+neo4jdb=>subroutine: Neo4J Database|data
+images=>subroutine: Screenshot of Graph (PNG)|data
+alligatorca=>inputoutput: Alligator-CA Coorespondance Analysis|tool:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt
+alligator=>inputoutput: Alligator|tool:>https://github.com/RGZM/alligator
+alligatortoamt=>inputoutput: Alligator To Amt|tool
+amt=>inputoutput: Academic Meta Tool|tool:>http://academic-meta-tool.xyz
+neo4jimporter=>inputoutput: Neo4J Importer|tool
+neo4jguifrontend=>inputoutput: Neo4J GUI Frontend Screenshot Tool|tool
 
 statisticaldata->alligatorca->alligatorfile(right)->alligator->alligatorrdf(right)->amt(right)->cypher->neo4jimporter(right)->neo4jdb(right)->neo4jguifrontend(right)->images`;
 
-let oghamciic=`book=>subroutine: CIIC Book by Macalister:>https://www.wikidata.org/wiki/Q70256237
-gcsv=>subroutine: CIIC Google Spreadsheet
-csv=>subroutine: CIIC CSV
-postgisogham=>subroutine: PostGIS Ogham Database
-csv2=>subroutine: PostGIS CSV
-images=>subroutine: Density Map Images (PNG)
-booktocsv=>inputoutput: Manual digitization process
-gcsvtocsv=>inputoutput: Google Spreadsheet to CSV Export
-csvtopostgis=>inputoutput: CSV to POSTGIS Import (for Enrichment and Data Cleaning)
-postgistocsv=>inputoutput: POSTGIS to CSV Export
-rscript=>inputoutput: R Script:>
+let oghamciic=`book=>subroutine: CIIC Book by Macalister|data:>https://www.wikidata.org/wiki/Q70256237
+gcsv=>subroutine: CIIC Google Spreadsheet|data
+csv=>subroutine: CIIC CSV|data
+postgisogham=>subroutine: PostGIS Ogham Database|data
+csv2=>subroutine: PostGIS CSV|data
+images=>subroutine: Density Map Images (PNG)|data
+booktocsv=>inputoutput: Manual digitization process|tool
+gcsvtocsv=>inputoutput: Google Spreadsheet to CSV Export|tool
+csvtopostgis=>inputoutput: CSV to POSTGIS Import (for Enrichment and Data Cleaning)|tool
+postgistocsv=>inputoutput: POSTGIS to CSV Export|tool
+rscript=>inputoutput: R Script|tool:>
 
 book->booktocsv->gcsv(right)->gcsvtocsv(right)->csv(right)->csvtopostgis(right)->postgisogham(right)->postgistocsv(right)->csv2->rscript->images`;
 
-let oghamcisp=`msaccess=>subroutine: CISP MS Access Database
-sqlfile=>subroutine: SQL File
-postgisdb=>subroutine: Ogham PostGIS Database
-rdf4jdb=>subroutine: RDF4J SPARQL Repository
-csv=>subroutine: Ogham CSV
-ttl=>subroutine: Ogham TTL
-sparqlresult=>subroutine: Ogham SPARQL Result
-qgisvectorlayer=>subroutine: QGIS Vector Layer
-images=>subroutine: Map Image (PNG)
-bullzip=>inputoutput: Bullzip
-pythonscript=>inputoutput: Python Script
-csvtopostgis=>inputoutput: SQL POSTGIS Import
-postgistocsv=>inputoutput: POSTGIS to CSV Export
-rdf4jimport=>inputoutput: RDF4J Import
-sparqlunicornqgisplugin=>inputoutput: SPARQLing Unicorn QGIS Plugin
-qgisprintcomposer=>inputoutput: QGIS Print Composer
-rdf4jsparqlendpoint=>inputoutput: RDF4J SPARQL Endpoint
+let oghamcisp=`msaccess=>subroutine: CISP MS Access Database|data
+sqlfile=>subroutine: SQL File|data
+postgisdb=>subroutine: Ogham PostGIS Database|data
+rdf4jdb=>subroutine: RDF4J SPARQL Repository|data
+csv=>subroutine: Ogham CSV|data
+ttl=>subroutine: Ogham TTL|data
+sparqlresult=>subroutine: Ogham SPARQL Result|data
+qgisvectorlayer=>subroutine: QGIS Vector Layer|data
+images=>subroutine: Map Image (PNG)|data
+bullzip=>inputoutput: Bullzip|tool
+pythonscript=>inputoutput: Python Script|tool
+csvtopostgis=>inputoutput: SQL POSTGIS Import|tool
+postgistocsv=>inputoutput: POSTGIS to CSV Export|tool
+rdf4jimport=>inputoutput: RDF4J Import|tool
+sparqlunicornqgisplugin=>inputoutput: SPARQLing Unicorn QGIS Plugin|tool
+qgisprintcomposer=>inputoutput: QGIS Print Composer|tool
+rdf4jsparqlendpoint=>inputoutput: RDF4J SPARQL Endpoint|tool
 
 msaccess->bullzip->sqlfile(left)->csvtopostgis(bottom)->postgisdb(right)->postgistocsv(right)->csv(right)->pythonscript(right)->ttl(right)->rdf4jimport->rdf4jdb(left)->rdf4jsparqlendpoint->sparqlresult(right)->sparqlunicornqgisplugin(right)->qgisvectorlayer(right)->qgisprintcomposer(right)->images`;
 
