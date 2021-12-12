@@ -61,7 +61,7 @@ pythonscript=>inputoutput: Python Script|tool
 csvtopostgis=>inputoutput: SQL POSTGIS Import|tool
 postgistocsv=>inputoutput: POSTGIS to CSV Export|tool
 rdf4jimport=>inputoutput: RDF4J Import|tool
-sparqlunicornqgisplugin=>inputoutput:SPARQLing Unicorn QGIS Plugin (Q74005133)|toolwd:>https://www.wikidata.org/entity/Q74005133
+sparqlunicornqgisplugin=>inputoutput: SPARQLing Unicorn QGIS Plugin (Q74005133)|toolwd:>https://www.wikidata.org/entity/Q74005133
 qgisprintcomposer=>inputoutput: QGIS Print Composer|tool
 rdf4jsparqlendpoint=>inputoutput: RDF4J SPARQL Endpoint|tool
 
