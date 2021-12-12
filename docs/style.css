@@ -1,4 +1,18 @@
-.end-element { fill : #FFCCFF; }
-		  body { font-family: 'Oswald', sans-serif !important; background-color: #37474f; color: #cacaca;}
-		  h1, h2 { color: #ffd966; }
-		  a { color: #64ffda; text-decoration: underline; }
+.end-element {
+    fill: #FFCCFF;
+}
+
+body {
+    font-family: 'Oswald', sans-serif !important;
+    background-color: #37474f;
+    color: #cacaca;
+}
+
+h1, h2 {
+    color: #ffd966;
+}
+
+a {
+    color: #64ffda;
+    text-decoration: underline;
+}

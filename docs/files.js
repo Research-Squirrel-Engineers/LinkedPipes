@@ -1,4 +1,4 @@
-let alligator=`statisticaldata=>subroutine: Statistical data (CSV)|data:>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
+let alligator = `statisticaldata=>subroutine: Statistical data (CSV)|data:>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
 alligatorfile=>subroutine: Alligator File|data:>https://github.com/RGZM/alligator-mt-data
 alligatorrdf=>subroutine: Alligator RDF|data:>https://rgzm.github.io/alligator/vocab/
 cypher=>subroutine: Cypher Dataset|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_cypther.cql
@@ -13,7 +13,7 @@ neo4jguifrontend=>inputoutput: Neo4J GUI Frontend Screenshot Tool|tool
 
 statisticaldata->alligatorca->alligatorfile(right)->alligator->alligatorrdf(right)->amt(right)->cypher->neo4jimporter(right)->neo4jdb(right)->neo4jguifrontend(right)->images`;
 
-let oghamciic=`book=>subroutine: CIIC Book by Macalister|data:>https://www.wikidata.org/wiki/Q70256237
+let oghamciic = `book=>subroutine: CIIC Book by Macalister|data:>https://www.wikidata.org/wiki/Q70256237
 gcsv=>subroutine: CIIC Google Spreadsheet|data
 csv=>subroutine: CIIC CSV|data
 postgisogham=>subroutine: PostGIS Ogham Database|data
@@ -27,7 +27,7 @@ rscript=>inputoutput: R Script|tool:>
 
 book->booktocsv->gcsv(right)->gcsvtocsv(right)->csv(right)->csvtopostgis(right)->postgisogham(right)->postgistocsv(right)->csv2->rscript->images`;
 
-let oghamcisp=`msaccess=>subroutine: CISP MS Access Database|data
+let oghamcisp = `msaccess=>subroutine: CISP MS Access Database|data
 sqlfile=>subroutine: SQL File|data
 postgisdb=>subroutine: Ogham PostGIS Database|data
 rdf4jdb=>subroutine: RDF4J SPARQL Repository|data
@@ -47,7 +47,7 @@ rdf4jsparqlendpoint=>inputoutput: RDF4J SPARQL Endpoint|tool
 
 msaccess->bullzip->sqlfile(left)->csvtopostgis(bottom)->postgisdb(right)->postgistocsv(right)->csv(right)->pythonscript(right)->ttl(right)->rdf4jimport->rdf4jdb(left)->rdf4jsparqlendpoint->sparqlresult(right)->sparqlunicornqgisplugin(right)->qgisvectorlayer(right)->qgisprintcomposer(right)->images`;
 
-let julesverne=`csv=>subroutine: Jules_Vernes_Five_Weeks_in_a_balloon.txt|data:>https://www.gutenberg.org/cache/epub/3526/pg3526-images.html#link2HCH0001
+let julesverne = `csv=>subroutine: Jules_Vernes_Five_Weeks_in_a_balloon.txt|data:>https://www.gutenberg.org/cache/epub/3526/pg3526-images.html#link2HCH0001
 recogitods=>subroutine: Recogito Dataset|data
 geojson=>subroutine: GeoJSON|data
 qgislayer=>subroutine: QGIS Vector Layer|data

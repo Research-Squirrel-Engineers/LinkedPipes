@@ -1,16 +1,17 @@
 <html>
+
 <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Linked Lipes">
     <meta property="og:locale" content="en_US">
-	<link rel="canonical" href="http://linkedpipes.xyz/">
+    <link rel="canonical" href="http://linkedpipes.xyz/">
     <meta property="og:url" content="http://linkedpipes.xyz/">
     <meta property="og:site_name" content="Linked Pipes">
-		<title>Linked Pipes Viewer</title>
-		<link rel="stylesheet" href="style.css">
-		<script type="application/ld+json">
+    <title>Linked Pipes Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
         {
             "@type": "WebSite",
             "url": "http://linkedpipes.xyz/",
@@ -20,9 +21,10 @@
         }
     </script>
 </head>
+
 <body>
-	<h1>Linked Pipes Viewer [based on <a href="https://flowchart.js.org/" targate="_blank">flowchart.js</a>]</h1>
-        <div><textarea id="code" style="width: 100%;" rows="11">
+    <h1>Linked Pipes Viewer [based on <a href="https://flowchart.js.org/" targate="_blank">flowchart.js</a>]</h1>
+    <div><textarea id="code" style="width: 100%;" rows="11">
 csv=>subroutine: Jules_Vernes_Five_Weeks_in_a_balloon.txt|data:>https://www.gutenberg.org/cache/epub/3526/pg3526-images.html#link2HCH0001
 recogitods=>subroutine: Recogito Dataset|data
 geojson=>subroutine: GeoJSON|data
@@ -37,21 +39,26 @@ qgistool=>inputoutput: QGIS 3.18 (Q1329181)|tool:>https://www.wikidata.org/entit
 qgisprintcomposer=>inputoutput: QGIS 3.18 Print Composer|tool
 sparqlunicorntool=>inputoutput: SPARQLing Unicorn QGIS Plugin 0.12 (Q71937877)|tool:>https://www.wikidata.org/entity/Q71937877
 
-
 csv->recogito(right)->recogitods->recogitoannotator(left)->annotatedrecogitods->recogitoexporter(right)->geojson(right)->qgistool->qgislayer(left)->sparqlunicorntool->qgislayerenriched(right)->qgisprintcomposer(right)->qgismap
 </textarea></div>
-        <div>
-		Select example:<select id="pipeselect"><option value="alligator">Alligator</option><option value="julesverne" selected="selected">Jules Verne Example</option><option value="oghamciic">Ogham CIIC</option><option value="oghamcisp">Ogham CISP</option></select><br/>
-		<button id="run" type="button">Run</button><button download="myImage.jpg" onclick="downloadSVG()">Download graphic as SVG</button></div>
-        <div id="canvas" style="width:100%"></div>
-<div id="diagram" style="width:100%"></div>
+    <div>
+        Select example:<select id="pipeselect">
+            <option value="alligator">Alligator</option>
+            <option value="julesverne" selected="selected">Jules Verne Example</option>
+            <option value="oghamciic">Ogham CIIC</option>
+            <option value="oghamcisp">Ogham CISP</option>
+        </select><br />
+        <button id="run" type="button">Run</button><button download="myImage.jpg" onclick="downloadSVG()">Download graphic as SVG</button></div>
+    <div id="canvas" style="width:100%"></div>
+    <div id="diagram" style="width:100%"></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/rdflib@2.2.12/dist/rdflib.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="https://flowchart.js.org/flowchart-latest.js"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-        <script src="files.js"></script>
-		<script src="rdfaction.js"></script>
-		<script src="chartaction.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://flowchart.js.org/flowchart-latest.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="files.js"></script>
+<script src="rdfaction.js"></script>
+<script src="chartaction.js"></script>
+
 </html>
