@@ -1,80 +1,24 @@
 <html>
 <head>
-        <style type="text/css">
-          .end-element { fill : #FFCCFF; }
-		  body { font-family: 'Oswald', sans-serif !important; background-color: #37474f; color: #cacaca;}
-		  h1, h2 { color: #ffd966; }
-		  a { color: #64ffda; text-decoration: underline; }
-        </style>
-        <script src="https://cdn.jsdelivr.net/npm/rdflib@2.2.12/dist/rdflib.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="https://flowchart.js.org/flowchart-latest.js"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-        <script src="files.js"></script>
-		<script src="rdfaction.js"></script>
-        <script>
-		
-
-	var graphmap={"julesverne":julesverne,"oghamcisp":oghamcisp,"oghamciic":oghamciic,"alligator":alligator}
-		
-			var chart;
-            window.onload = function () {
-                var btn = document.getElementById("run"),
-                    cd = document.getElementById("code");
-
-                (btn.onclick = function () {
-                    var code = cd.value;
-
-                    if (chart) {
-                      chart.clean();
-                    }
-
-                    chart = flowchart.parse(code);
-                    chart.drawSVG('canvas', {
-                      // 'x': 30,
-                      // 'y': 50,
-                      'line-width': 3,
-                      'maxWidth': 3,//ensures the flowcharts fits within a certian width
-                      'line-length': 50,
-                      'text-margin': 10,
-                      'font-size': 14,
-                      'font': 'normal',
-                      'font-family': 'Oswald',
-                      'font-weight': 'normal',
-                      'font-color': 'black',
-                      'line-color': 'black',
-                      'element-color': 'black',
-                      'fill': 'white',
-                      'yes-text': 'yes',
-                      'no-text': 'no',
-                      'arrow-end': 'block',
-                      'scale': 1,
-                      'symbols': {
-                        'start': {
-                          'font-color': 'red',
-                          'element-color': 'green',
-                          'fill': 'yellow'
-                        },
-                        'end':{
-                          'class': 'end-element'
-                        }
-                      },
-                      'flowstate' : {
-						'data': { 'fill' : '#d6fefe', 'font-size' : 12, 'font-color' : 'black'},
-						'tool': { 'fill' : '#ffffd1', 'font-size' : 12, 'font-color' : 'black', 'font-weight' : 'bold'},
-                      }
-                    });
-
-                    $('[id^=sub1]').click(function(){
-                      alert('info here');
-                    });
-                })();
-
-            };
-
-            </script>
-<title>Linked Pipes Viewer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Linked Lipes">
+    <meta property="og:locale" content="en_US">
+	<link rel="canonical" href="http://linkedpipes.xyz/">
+    <meta property="og:url" content="http://linkedpipes.xyz/">
+    <meta property="og:site_name" content="Linked Pipes">
+		<title>Linked Pipes Viewer</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="application/ld+json">
+        {
+            "@type": "WebSite",
+            "url": "http://linkedpipes.xyz/",
+            "headline": "Linked Pipes",
+            "name": "Linked Pipes",
+            "@context": "http://schema.org"
+        }
+    </script>
 </head>
 <body>
 	<h1>Linked Pipes Viewer [based on <a href="https://flowchart.js.org/" targate="_blank">flowchart.js</a>]</h1>
@@ -101,80 +45,13 @@ csv->recogito(right)->recogitods->recogitoannotator(left)->annotatedrecogitods->
 		<button id="run" type="button">Run</button><button download="myImage.jpg" onclick="downloadSVG()">Download graphic as SVG</button></div>
         <div id="canvas" style="width:100%"></div>
 <div id="diagram" style="width:100%"></div>
-<script>
-function downloadSVG(){
-	console.log("download svg")
-	var svg = document.getElementsByTagName("svg");
-    var code = svg[0].outerHTML;
-	console.log(code)
-	saveTextAsFile(code,".svg","mydiagram")
-	
-}
-
-  function saveTextAsFile(tosave,fileext,filename)
-  {
-      var a = document.createElement('a');
-      a.style = "display: none";  
-      var blob= new Blob([tosave], {type:'text/plain'});
-      var url = window.URL.createObjectURL(blob);
-      var filename = filename+fileext;
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      setTimeout(function(){
-          document.body.removeChild(a);
-          window.URL.revokeObjectURL(url);  
-      }, 1000);
-  }
-
-
-  $('#pipeselect').change(function() {
-		$('#code').val(graphmap[$('#pipeselect').val()])
-		console.log($('#pipeselect').val())
-		console.log(graphmap[$('#pipeselect').val()])
-		if (chart) {
-                      chart.clean();
-                    }
-		chart = flowchart.parse(graphmap[$('#pipeselect').val()]);
-		                    chart.drawSVG('canvas', {
-                      // 'x': 30,
-                      // 'y': 50,
-                      'line-width': 3,
-                      'maxWidth': 3,//ensures the flowcharts fits within a certian width
-                      'line-length': 50,
-                      'text-margin': 10,
-                      'font-size': 14,
-                      'font': 'normal',
-                      'font-family': 'Oswald',
-                      'font-weight': 'normal',
-                      'font-color': 'black',
-                      'line-color': 'black',
-                      'element-color': 'black',
-                      'fill': 'white',
-                      'yes-text': 'yes',
-                      'no-text': 'no',
-                      'arrow-end': 'block',
-                      'scale': 1,
-                      'symbols': {
-                        'start': {
-                          'font-color': 'red',
-                          'element-color': 'green',
-                          'fill': 'yellow'
-                        },
-                        'end':{
-                          'class': 'end-element'
-                        }
-                      },
-                      'flowstate' : {
-						'data': { 'fill' : '#d6fefe', 'font-size' : 12, 'font-color' : 'black'},
-						'tool': { 'fill' : '#ffffd1', 'font-size' : 12, 'font-color' : 'black', 'font-weight' : 'bold'},
-                      }
-                    });
-	});
-	
-
-
-</script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/rdflib@2.2.12/dist/rdflib.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://flowchart.js.org/flowchart-latest.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="files.js"></script>
+		<script src="rdfaction.js"></script>
+		<script src="chartaction.js"></script>
 </html>
