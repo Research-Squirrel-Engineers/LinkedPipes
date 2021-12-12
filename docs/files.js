@@ -1,41 +1,33 @@
-var alligator=`
-		statisticaldata=>subroutine: Statistical data (CSV):>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
+let alligator=`statisticaldata=>subroutine: Statistical data (CSV):>:https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
 alligatorfile=>subroutine: Alligator File:>https://github.com/RGZM/alligator-mt-data
 alligatorrdf=>subroutine: Alligator RDF:>https://rgzm.github.io/alligator/vocab/
 cypher=>subroutine: Cypher Dataset:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_cypther.cql
 neo4jdb=>subroutine: Neo4J Database
 images=>subroutine: Screenshot of Graph (PNG)
-
-
-
 alligatorca=>inputoutput: Alligator-CA Coorespondance Analysis:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt
 alligator=>inputoutput: Alligator :>https://github.com/RGZM/alligator
 alligatortoamt=>inputoutput: Alligator To Amt
-amt=>inputoutput: Academic Meta Tool :>http://academic-meta-tool.xyz/
+amt=>inputoutput: Academic Meta Tool :>http://academic-meta-tool.xyz
 neo4jimporter=>inputoutput: Neo4J Importer
 neo4jguifrontend=>inputoutput: Neo4J GUI Frontend Screenshot Tool
 
+statisticaldata->alligatorca->alligatorfile(right)->alligator->alligatorrdf(right)->amt(right)->cypher->neo4jimporter(right)->neo4jdb(right)->neo4jguifrontend(right)->images`;
 
-statisticaldata->alligatorca->alligatorfile(right)->alligator->alligatorrdf(right)->amt(right)->cypher->neo4jimporter(right)->neo4jdb(right)->neo4jguifrontend(right)->images`
-
-		var oghamciic=`book=>subroutine: CIIC Book by Macalister:>https://www.wikidata.org/wiki/Q70256237
+let oghamciic=`book=>subroutine: CIIC Book by Macalister:>https://www.wikidata.org/wiki/Q70256237
 gcsv=>subroutine: CIIC Google Spreadsheet
 csv=>subroutine: CIIC CSV
 postgisogham=>subroutine: PostGIS Ogham Database
 csv2=>subroutine: PostGIS CSV
 images=>subroutine: Density Map Images (PNG)
-
-
 booktocsv=>inputoutput: Manual digitization process
 gcsvtocsv=>inputoutput: Google Spreadsheet to CSV Export
 csvtopostgis=>inputoutput: CSV to POSTGIS Import (for Enrichment and Data Cleaning)
 postgistocsv=>inputoutput: POSTGIS to CSV Export
 rscript=>inputoutput: R Script:>
 
+book->booktocsv->gcsv(right)->gcsvtocsv(right)->csv(right)->csvtopostgis(right)->postgisogham(right)->postgistocsv(right)->csv2->rscript->images`;
 
-book->booktocsv->gcsv(right)->gcsvtocsv(right)->csv(right)->csvtopostgis(right)->postgisogham(right)->postgistocsv(right)->csv2->rscript->images`
-
-	var oghamcisp=`msaccess=>subroutine: CISP MS Access Database
+let oghamcisp=`msaccess=>subroutine: CISP MS Access Database
 sqlfile=>subroutine: SQL File
 postgisdb=>subroutine: Ogham PostGIS Database
 rdf4jdb=>subroutine: RDF4J SPARQL Repository
@@ -44,8 +36,6 @@ ttl=>subroutine: Ogham TTL
 sparqlresult=>subroutine: Ogham SPARQL Result
 qgisvectorlayer=>subroutine: QGIS Vector Layer
 images=>subroutine: Map Image (PNG)
-
-
 bullzip=>inputoutput: Bullzip
 pythonscript=>inputoutput: Python Script
 csvtopostgis=>inputoutput: SQL POSTGIS Import
@@ -55,8 +45,7 @@ sparqlunicornqgisplugin=>inputoutput: SPARQLing Unicorn QGIS Plugin
 qgisprintcomposer=>inputoutput: QGIS Print Composer
 rdf4jsparqlendpoint=>inputoutput: RDF4J SPARQL Endpoint
 
-
-msaccess->bullzip->sqlfile(left)->csvtopostgis(bottom)->postgisdb(right)->postgistocsv(right)->csv(right)->pythonscript(right)->ttl(right)->rdf4jimport->rdf4jdb(left)->rdf4jsparqlendpoint->sparqlresult(right)->sparqlunicornqgisplugin(right)->qgisvectorlayer(right)->qgisprintcomposer(right)->images`
+msaccess->bullzip->sqlfile(left)->csvtopostgis(bottom)->postgisdb(right)->postgistocsv(right)->csv(right)->pythonscript(right)->ttl(right)->rdf4jimport->rdf4jdb(left)->rdf4jsparqlendpoint->sparqlresult(right)->sparqlunicornqgisplugin(right)->qgisvectorlayer(right)->qgisprintcomposer(right)->images`;
 
 let julesverne=`csv=>subroutine: Jules_Vernes_Five_Weeks_in_a_balloon.txt|data:>https://www.gutenberg.org/cache/epub/3526/pg3526-images.html#link2HCH0001
 recogitods=>subroutine: Recogito Dataset|data
