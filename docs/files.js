@@ -5,9 +5,9 @@ cypher=>subroutine: Cypher Dataset|data:>https://github.com/RGZM/alligator-mt-da
 neo4jdb=>subroutine: Neo4J Database|data
 images=>subroutine: Screenshot of Graph (PNG)|data
 alligatorca=>inputoutput: Alligator-CA Coorespondance Analysis|tool:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt
-alligator=>inputoutput: Alligator|tool:>https://github.com/RGZM/alligator
+alligator=>inputoutput: Alligator|toolwd:>https://github.com/RGZM/alligator
 alligatortoamt=>inputoutput: Alligator To Amt|tool
-amt=>inputoutput: Academic Meta Tool|tool:>http://academic-meta-tool.xyz
+amt=>inputoutput: Academic Meta Tool|toolwd:>http://academic-meta-tool.xyz
 neo4jimporter=>inputoutput: Neo4J Importer|tool
 neo4jguifrontend=>inputoutput: Neo4J GUI Frontend Screenshot Tool|tool
 
@@ -41,7 +41,7 @@ pythonscript=>inputoutput: Python Script|tool
 csvtopostgis=>inputoutput: SQL POSTGIS Import|tool
 postgistocsv=>inputoutput: POSTGIS to CSV Export|tool
 rdf4jimport=>inputoutput: RDF4J Import|tool
-sparqlunicornqgisplugin=>inputoutput: SPARQLing Unicorn QGIS Plugin|tool
+sparqlunicornqgisplugin=>inputoutput: SPARQLing Unicorn QGIS Plugin|toolwd
 qgisprintcomposer=>inputoutput: QGIS Print Composer|tool
 rdf4jsparqlendpoint=>inputoutput: RDF4J SPARQL Endpoint|tool
 
