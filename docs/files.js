@@ -29,7 +29,7 @@ gigameshtool=>inputoutput: Gigamesh Clean|toolwd:>https://www.wikidata.org/entit
 gigameshtool2=>inputoutput: Gigamesh Alignment|toolwd:>https://www.wikidata.org/entity/Q55896111
 gigameshtool3=>inputoutput: Gigamesh Rendering Export|toolwd:>https://www.wikidata.org/entity/Q55896111
 annotorious=>inputoutput: Annotorious (Q110088633)|toolwd:>https://www.wikidata.org/entity/Q110088633
-imagemagick=>inputoutput: Imagemagick Crop and Annotate |tool:>https://www.wikidata.org/entity/Q1047199
+imagemagick=>inputoutput: Imagemagick Crop and Annotate (Q1047199)|toolwd:>https://www.wikidata.org/entity/Q1047199
 
 claytablet->3dscanning(right)->3dscan(right)->gigameshtool->cleaned_3dscan(left)->gigameshtool2->align_clean_3dscan(right)->gigameshtool3(right)->3dscan_rendering(right)->annotorious(right)->3dscan_rendering_anno(right)->imagemagick(right)->anno_crop`
 
