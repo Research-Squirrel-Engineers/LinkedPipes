@@ -49,7 +49,7 @@ neo4jguifrontend=>inputoutput: Neo4J GUI Frontend Screenshot Tool|tool
 
 statisticaldata->alligatorca->alligatorfile(right)->alligator->alligatorrdf(right)->amt(right)->cypher->neo4jimporter(right)->neo4jdb(right)->neo4jguifrontend(right)->images`;
 
-let oghamciic = `book=>subroutine: CIIC Book by Macalister|data:>https://www.wikidata.org/wiki/Q70256237
+let oghamciic = `book=>subroutine: CIIC Book by Macalister|datand:>https://www.wikidata.org/wiki/Q70256237
 gcsv=>subroutine: CIIC Google Spreadsheet|data
 csv=>subroutine: CIIC CSV|data
 postgisogham=>subroutine: PostGIS Ogham Database|data
