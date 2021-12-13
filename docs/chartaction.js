@@ -53,6 +53,11 @@ window.onload = function() {
                     'font-size': 12,
                     'font-color': 'black'
                 },
+				'datand': {
+                    'fill': '#cccccc',
+                    'font-size': 12,
+                    'font-color': 'black'
+                },
                 'tool': {
                     'fill': '#ffffd1',
                     'font-size': 12,
