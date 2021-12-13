@@ -2,7 +2,8 @@ var graphmap = {
     "julesverne": julesverne,
     "oghamcisp": oghamcisp,
     "oghamciic": oghamciic,
-    "alligator": alligator
+    "alligator": alligator,
+    "cuneiform_3d: cuneiform_3d
 }
 
 var chart;
