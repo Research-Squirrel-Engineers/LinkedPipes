@@ -3,7 +3,7 @@ var graphmap = {
     "oghamcisp": oghamcisp,
     "oghamciic": oghamciic,
     "alligator": alligator,
-    "cuneiform_3d: cuneiform_3d
+    "cuneiform_3d": cuneiform_3d
 }
 
 var chart;
