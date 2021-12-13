@@ -15,6 +15,25 @@ sparqlunicorntool=>inputoutput: SPARQLing Unicorn QGIS Plugin 0.12 (Q71937877)|t
 
 csv->recogito(right)->recogitods->recogitoannotator(left)->annotatedrecogitods->recogitoexporter(right)->geojson(right)->qgistool->qgislayer(left)->sparqlunicorntool->qgislayerenriched(right)->qgisprintcomposer(right)->qgismap`;
 
+let cuneiform_3d=`
+claytablet=>subroutine: Clay tablet
+3dscan=>subroutine: Cuneiform Tablet 3D Scan|data
+cleaned_3dscan=>subroutine: Cleaned 3D Scan|data
+align_clean_3dscan=>subroutine: Aligned and Cleaned 3D Scan|data
+3dscan_rendering=>subroutine: Rendering from 3D Scan|data
+3dscan_rendering_anno=>subroutine: Annotation on 3D Rendering|data
+anno_crop=>subroutine: Cropped annotation|data
+
+3dscanning=>inputoutput: 3D Scanning Software (ATOS) |tool:>https://www.atos-core.com/index.php
+gigameshtool=>inputoutput: Gigamesh|tool:>https://gigamesh.eu/
+gigameshtool2=>inputoutput: Gigamesh|tool:>https://gigamesh.eu/
+gigameshtool3=>inputoutput: Gigamesh|tool:>https://gigamesh.eu/
+annotorious=>inputoutput: Annotorious|tool:>https://github.com/recogito/annotorious
+imagemagick=>inputoutput: Imagemagick|tool:>https://github.com/ImageMagick/ImageMagick
+
+claytablet->3dscanning(right)->3dscan(right)->gigameshtool->cleaned_3dscan(left)->gigameshtool2->align_clean_3dscan(right)->gigameshtool3(right)->3dscan_rendering(right)->annotorious(right)->3dscan_rendering_anno(right)->imagemagick(right)->anno_crop
+`
+
 let alligator = `statisticaldata=>subroutine: Statistical data (CSV)|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv
 alligatorfile=>subroutine: Alligator File|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt
 alligatorrdf=>subroutine: Alligator RDF|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_rdf.ttl
