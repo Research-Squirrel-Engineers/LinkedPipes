@@ -98,6 +98,10 @@ cfscripts=>inputoutput: ColdFusion Scripts|tool
 postgistocsv=>inputoutput: POSTGIS to CSV Export|tool
 python=>inputoutput: Python Script|tool:>https://github.com/RGZM/samian-lod/blob/main/py/_run_py3.py[blank]
 ttltordf4j=>inputoutput: RDF4J Import JAVA Maven Tool|tool
-qs=>inputoutput: QuickStatements 2 (Q29032512)|tool:wd>https://www.wikidata.org/wiki/Q29032512[blank]
+qs=>inputoutput: QuickStatements 2 (Q29032512)|toolwd:>https://www.wikidata.org/wiki/Q29032512[blank]
 
-samianresearch->userinput->postgisdb(right)->cfscripts(right)->views(right)->postgistocsv(right)->csvs(right)->python(right)->lod->ttltordf4j->rdf4jdb`;
+cond=>condition: Wikidata or own triplestore
+
+samianresearch->userinput->postgisdb(right)->cfscripts(right)->views(right)->postgistocsv(right)->csvs(right)->python(right)->lod->ttltordf4j
+lod->cond(no)->ttltordf4j->rdf4jdb
+lod->cond(yes)->qs->wikidata`;
