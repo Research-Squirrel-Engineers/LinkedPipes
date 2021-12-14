@@ -85,19 +85,19 @@ rdf4jsparqlendpoint=>inputoutput: RDF4J SPARQL Endpoint|tool
 
 msaccess->bullzip->sqlfile(left)->csvtopostgis(bottom)->postgisdb(right)->postgistocsv(right)->csv(right)->pythonscript(right)->ttl(right)->rdf4jimport->rdf4jdb(left)->rdf4jsparqlendpoint->sparqlresult(right)->sparqlunicornqgisplugin(right)->qgisvectorlayer(right)->qgisprintcomposer(right)->images`;
 
-let samianresearch = `samianresearch=>subroutine: Samian Research Database|data:>https://www.rgzm.de/samian
+let samianresearch = `samianresearch=>subroutine: Samian Research Database|data:>https://www.rgzm.de/samian[blank]
 postgisdb=>subroutine: Samian Research PostGIS|data
 views=>subroutine: Samian Research PostGIS Views|data
-csvs=>subroutine: Samian Research CSVs|data:>https://www1.rgzm.de/ips/lod/
-lod=>subroutine: Linked Open Samian Ware|data:>https://github.com/RGZM/samian-lod/tree/main/data
+csvs=>subroutine: Samian Research CSVs|data:>https://www1.rgzm.de/ips/lod/[blank]
+lod=>subroutine: Linked Open Samian Ware|data:>https://github.com/RGZM/samian-lod/tree/main/data[blank]
 rdf4jdb=>subroutine: RDF4J LOSW Repository|data
-wikidata=>subroutine: WikiProject Linked Open Samian Ware|data:>https://www.wikidata.org/wiki/Wikidata:WikiProject_Linked_Open_Samian_Ware
+wikidata=>subroutine: WikiProject Linked Open Samian Ware|data:>https://www.wikidata.org/wiki/Wikidata:WikiProject_Linked_Open_Samian_Ware[blank]
 
 userinput=>inputoutput: User Community Input|tool
 cfscripts=>inputoutput: ColdFusion Scripts|tool
 postgistocsv=>inputoutput: POSTGIS to CSV Export|tool
-python=>inputoutput: Python Script|tool:>https://github.com/RGZM/samian-lod/blob/main/py/_run_py3.py
+python=>inputoutput: Python Script|tool:>https://github.com/RGZM/samian-lod/blob/main/py/_run_py3.py[blank]
 ttltordf4j=>inputoutput: RDF4J Import JAVA Maven Tool|tool
-qs=>inputoutput: QuickStatements 2 (Q29032512)|tool:wd>https://www.wikidata.org/wiki/Q29032512
+qs=>inputoutput: QuickStatements 2 (Q29032512)|tool:wd>https://www.wikidata.org/wiki/Q29032512[blank]
 
 samianresearch->userinput->postgisdb(right)->cfscripts(right)->views(right)->postgistocsv(right)->csvs(right)->python(right)->lod->ttltordf4j->rdf4jdb`;
