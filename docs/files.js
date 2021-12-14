@@ -100,7 +100,7 @@ python=>inputoutput: Python Script|tool:>https://github.com/RGZM/samian-lod/blob
 ttltordf4j=>inputoutput: RDF4J Import JAVA Maven Tool|tool
 qs=>inputoutput: QuickStatements 2 (Q29032512)|toolwd:>https://www.wikidata.org/wiki/Q29032512[blank]
 
-cond=>condition: Wikidata or own triplestore
+cond=>condition: Wikidata or own triplestore|cond
 
 samianresearch->userinput->postgisdb(right)->cfscripts(right)->views(right)->postgistocsv(right)->csvs(right)->python(right)->lod->ttltordf4j
 lod->cond(no)->ttltordf4j->rdf4jdb

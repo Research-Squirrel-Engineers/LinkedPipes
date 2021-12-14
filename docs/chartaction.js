@@ -72,6 +72,12 @@ window.onload = function() {
                     'font-color': 'black',
                     'font-weight': 'bold'
                 },
+                'cond': {
+                    'fill': '#b6d7a8',
+                    'font-size': 10,
+                    'font-color': 'black',
+                    'font-weight': 'bold'
+                }
             }
         });
 
@@ -165,6 +171,12 @@ $('#pipeselect').change(function() {
                 'font-color': 'black',
                 'font-weight': 'bold'
             },
+            'cond': {
+                'fill': '#b6d7a8',
+                'font-size': 10,
+                'font-color': 'black',
+                'font-weight': 'bold'
+            }
         }
     });
 });
