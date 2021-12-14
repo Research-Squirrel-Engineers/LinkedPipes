@@ -3,7 +3,8 @@ var graphmap = {
     "oghamcisp": oghamcisp,
     "oghamciic": oghamciic,
     "alligator": alligator,
-    "cuneiform_3d": cuneiform_3d
+    "cuneiform_3d": cuneiform_3d,
+    "samianresearch": samianresearch
 }
 
 var chart;
@@ -54,7 +55,7 @@ window.onload = function() {
                     'font-size': 12,
                     'font-color': 'black'
                 },
-				'datand': {
+                'datand': {
                     'fill': '#cccccc',
                     'font-size': 12,
                     'font-color': 'black'
