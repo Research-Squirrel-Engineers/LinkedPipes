@@ -105,3 +105,29 @@ cond=>condition: Wikidata or own triplestore|cond
 samianresearch->userinput->postgisdb(right)->cfscripts(right)->views(right)->postgistocsv(right)->csvs(right)->python(right)->lod->ttltordf4j
 lod->cond(no)->ttltordf4j->rdf4jdb
 lod->cond(yes)->qs->wikidata`;
+
+let ciicrecogito = `book=>subroutine: CIIC 1945 Vol.1|datand:>https://www.wikidata.org/wiki/Q70256237
+pdf=>subroutine: CIIC Scan|data
+img8283=>subroutine: ciic_82_83.PNG|data
+recogito8283=>subroutine: Recogito fcefbnt6ajqg8t|data:>https://recogito.pelagios.org/document/fcefbnt6ajqg8t
+recogito8283_a=>subroutine: Recogito Annotation fcefbnt6ajqg8t|data:>https://recogito.pelagios.org/document/fcefbnt6ajqg8t
+csv8283=>subroutine: fcefbnt6ajqg8t.csv|data
+csv8283edit=>subroutine: fcefbnt6ajqg8t_edit.csv|data
+qgislayer=>subroutine: QGIS CSV Layer|data
+sparqlresult=>subroutine: Ogham SPARQL Result|data
+qgisvectorlayer=>subroutine: QGIS Vector Layer|data
+image=>subroutine: Map Image (PNG)|data
+
+scan=>inputoutput: scanning|tool
+snippingtool=>inputoutput: Snipping Tool (Q1192609)|toolwd:>https://www.wikidata.org/entity/Q1192609
+recogito=>inputoutput: Recogito (Q74692524)|toolwd:>https://www.wikidata.org/entity/Q74692524
+recogitoannotator=>inputoutput: Recogito Annotation tool|tool:>https://github.com/recogito/recogito-js
+recogitoexporter=>inputoutput: Recogito Exporter|tool
+csvmani=>inputoutput: CSV manipulation tool|tool
+qgis=>inputoutput: QGIS 3.18 (Q1329181):>https://www.wikidata.org/entity/Q1329181
+sparqlunicornqgisplugin1=>inputoutput: SPARQLing Unicorn QGIS Plugin
+sparqlunicornqgisplugin2=>inputoutput: SPARQLing Unicorn QGIS Plugin
+qgisprintcomposer=>inputoutput: QGIS Print Composer
+
+
+book->scan(right)->pdf->snippingtool(left)->img8283->recogito(right)->recogito8283(right)->recogitoannotator->recogito8283_a(left)->recogitoexporter->csv8283(right)->csvmani(right)->csv8283edit->qgis->qgislayer(left)->sparqlunicornqgisplugin1->sparqlresult(right)->sparqlunicornqgisplugin2(right)->qgisvectorlayer(right)->qgisprintcomposer(right)->image`;

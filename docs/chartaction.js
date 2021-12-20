@@ -4,7 +4,8 @@ var graphmap = {
     "oghamciic": oghamciic,
     "alligator": alligator,
     "cuneiform_3d": cuneiform_3d,
-    "samianresearch": samianresearch
+    "samianresearch": samianresearch,
+	"ciicrecogito": ciicrecogito
 }
 
 var chart;
