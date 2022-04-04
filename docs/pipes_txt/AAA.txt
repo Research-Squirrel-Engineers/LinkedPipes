@@ -1,0 +1,11 @@
+statisticaldata=>subroutine: Statistical data (CSV)|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_ca.csv[blank]
+alligatorfile=>subroutine: Alligator File|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v2/romanempire.agt[blank]
+alligatorrdf=>subroutine: Alligator RDF|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_rdf.ttl[blank]
+amtrdf=>subroutine: AMT RDF|data:>https://github.com/RGZM/alligator-mt-data/blob/master/v1/alligator_re_results_rdf.ttl[blank]
+
+alligatorca=>inputoutput: Alligator-CA Tool|tool:>https://github.com/RGZM/alligator-ca[blank]
+alligator=>inputoutput: Alligator (Q74004218)|toolwd:>https://www.wikidata.org/entity/Q74004218[blank]
+alligatortoamt=>inputoutput: Alligator to Amt transformer|tool
+amt=>inputoutput: Academic Meta Tool (Q74003194)|toolwd:>https://www.wikidata.org/entity/Q74003194[blank]
+
+statisticaldata->alligatorca->alligatorfile(right)->alligator->alligatorrdf(right)->amt(right)->amtrdf
